@@ -613,7 +613,7 @@ NSMutableDictionary *fileStreams = nil;
                 // dispatch data event
                 NSString * encodedChunk = [NSString alloc];
                 if( [[self.encoding lowercaseString] isEqualToString:@"utf8"] ) {
-                    encodedChunk = [encodedChunk initWithData:chunkData encoding:NSUTF8StringEncoding];
+                    encodedChunk = [encodedChunk initWithData:chunkData encoding:NSISOLatin1StringEncoding];
                 }
                 // when encoding is ASCII, send byte array data
                 else if ( [[self.encoding lowercaseString] isEqualToString:@"ascii"] ) {
